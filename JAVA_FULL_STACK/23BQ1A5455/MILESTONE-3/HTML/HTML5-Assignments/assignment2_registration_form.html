@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Online Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f4f4f9;
+        }
+        .form-card {
+            background-color: #ffffff;
+            padding: 25px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        table {
+            margin: 0 auto;
+            text-align: left;
+        }
+        td {
+            padding: 6px;
+        }
+        input[type="text"],
+        input[type="password"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 6px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+
+    <main class="form-card">
+        <h2>Online Registration Form</h2>
+        <form action="#" method="post" enctype="multipart/form-data">
+            <table>
+                <tr>
+                    <td><label for="username">Username:</label></td>
+                    <!-- HTML5 Attributes: placeholder, required, autofocus -->
+                    <td>
+                        <input type="text" id="username" name="username" placeholder="Enter username" required autofocus>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="password">Password:</label></td>
+                    <!-- HTML5 Attributes: placeholder, required -->
+                    <td>
+                        <input type="password" id="password" name="password" placeholder="Enter password" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="confirm_password">Confirm Password:</label></td>
+                    <!-- HTML5 Attributes: placeholder, required -->
+                    <td>
+                        <input type="password" id="confirm_password" name="confirm_password" placeholder="Re-enter password" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="fullname">Name:</label></td>
+                    <!-- HTML5 Attributes: placeholder, required -->
+                    <td>
+                        <input type="text" id="fullname" name="fullname" placeholder="John Doe" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Gender:</td>
+                    <td>
+                        <input type="radio" id="male" name="gender" value="male" required>
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Female</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="address">Address:</label></td>
+                    <!-- HTML5 Attribute: placeholder -->
+                    <td>
+                        <textarea id="address" name="address" rows="3" placeholder="Enter your full street address..." required></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="profession">Profession:</label></td>
+                    <td>
+                        <select id="profession" name="profession" required>
+                            <option value="" selected disabled>-- Select Profession --</option>
+                            <option value="developer">Developer</option>
+                            <option value="designer">Designer</option>
+                            <option value="manager">Manager</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="documents">Upload Documents:</label></td>
+                    <!-- HTML5 Attribute: multiple -->
+                    <td>
+                        <input type="file" id="documents" name="documents" multiple>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <br>
+                        <input type="submit" value="Register">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </main>
+
+</body>
+</html>
