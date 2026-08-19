@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management - Registration</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+        }
+
+        .container {
+            width: 500px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+            color: #444;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        input:focus,
+        select:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+
+        .email-row {
+            display: flex;
+            gap: 8px;
+        }
+
+        .email-row input {
+            flex: 1;
+        }
+
+        .check-btn {
+            width: 120px;
+            padding: 10px;
+            background: #6c757d;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .check-btn:hover {
+            background: #5a6268;
+        }
+
+        .register-btn {
+            width: 100%;
+            padding: 12px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        .register-btn:hover {
+            background: #0056b3;
+        }
+
+        .message {
+            display: none;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .success {
+            display: block;
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .error {
+            display: block;
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .login-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .login-link a {
+            color: #007bff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Library Registration</h1>
+
+    <div id="registerMessage" class="message"></div>
+
+    <form id="registerForm">
+
+        <div class="form-group">
+            <label for="email">Email *</label>
+
+            <div class="email-row">
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter email address"
+                    required
+                >
+
+                <button
+                    type="button"
+                    class="check-btn"
+                    onclick="checkEmail()"
+                >
+                    Check Email
+                </button>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password *</label>
+
+            <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Enter password"
+                required
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="name">Name *</label>
+
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+                required
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="dateOfBirth">Date of Birth</label>
+
+            <input
+                type="date"
+                id="dateOfBirth"
+                name="dateOfBirth"
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="gender">Gender</label>
+
+            <select id="gender" name="gender">
+                <option value="">Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="occupation">Occupation</label>
+
+            <input
+                type="text"
+                id="occupation"
+                name="occupation"
+                placeholder="Enter occupation"
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="city">City</label>
+
+            <input
+                type="text"
+                id="city"
+                name="city"
+                placeholder="Enter city"
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="mobile">Mobile</label>
+
+            <input
+                type="tel"
+                id="mobile"
+                name="mobile"
+                placeholder="Enter mobile number"
+            >
+        </div>
+
+        <button
+            type="submit"
+            class="register-btn"
+        >
+            Register
+        </button>
+
+    </form>
+
+    <div class="login-link">
+        Already registered?
+        <a href="login.html">Login here</a>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Important Cities</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        select {
+            padding: 8px;
+            width: 250px;
+            font-size: 16px;
+        }
+
+        #cityTable {
+            margin-top: 25px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 500px;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Important Cities by State</h2>
+
+    <label for="state">Select State:</label>
+
+    <select id="state" onchange="loadCities()">
+
+        <option value="">-- Select State --</option>
+
+        <option value="Andhra Pradesh">Andhra Pradesh</option>
+
+        <option value="Telangana">Telangana</option>
+
+        <option value="Tamil Nadu">Tamil Nadu</option>
+
+        <option value="Karnataka">Karnataka</option>
+
+        <option value="Maharashtra">Maharashtra</option>
+
+    </select>
+
+    <div id="cityTable"></div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

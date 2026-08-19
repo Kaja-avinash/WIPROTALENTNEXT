@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Library Management - Home</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+        }
+
+        .header {
+            background: #007bff;
+            color: white;
+            padding: 18px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .logout-btn {
+            background: white;
+            color: #007bff;
+            border: none;
+            padding: 9px 18px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .logout-btn:hover {
+            background: #e9ecef;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 40px auto;
+        }
+
+        .welcome {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+            margin-bottom: 25px;
+        }
+
+        .welcome h2 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        .welcome p {
+            color: #555;
+        }
+
+        .books {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+        }
+
+        .books h2 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background: #007bff;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        .empty-message {
+            text-align: center;
+            padding: 25px;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="header">
+
+    <h1>Library Management System</h1>
+
+    <button
+        class="logout-btn"
+        onclick="logout()"
+    >
+        Logout
+    </button>
+
+</div>
+
+
+<div class="container">
+
+    <div class="welcome">
+
+        <h2>
+            Welcome to the Library
+        </h2>
+
+        <p>
+            You have successfully logged in.
+        </p>
+
+    </div>
+
+
+    <div class="books">
+
+        <h2>
+            Available Books
+        </h2>
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>Book ID</th>
+                    <th>Book Name</th>
+                    <th>Category</th>
+                    <th>Author</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+
+                    <td>101</td>
+
+                    <td>
+                        Java Programming
+                    </td>
+
+                    <td>
+                        Programming
+                    </td>
+
+                    <td>
+                        Herbert Schildt
+                    </td>
+
+                    <td>
+                        Complete Java programming guide
+                    </td>
+
+                    <td>
+                        ₹550.00
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>102</td>
+
+                    <td>
+                        Learning AJAX
+                    </td>
+
+                    <td>
+                        Web Technology
+                    </td>
+
+                    <td>
+                        Thomas Powell
+                    </td>
+
+                    <td>
+                        Guide to AJAX and asynchronous web applications
+                    </td>
+
+                    <td>
+                        ₹450.00
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>103</td>
+
+                    <td>
+                        Database Management Systems
+                    </td>
+
+                    <td>
+                        Database
+                    </td>
+
+                    <td>
+                        Raghu Ramakrishnan
+                    </td>
+
+                    <td>
+                        Introduction to database concepts and SQL
+                    </td>
+
+                    <td>
+                        ₹600.00
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+
+<script>
+
+function logout() {
+
+    window.location.href =
+        "login.html";
+
+}
+
+</script>
+
+</body>
+</html>
