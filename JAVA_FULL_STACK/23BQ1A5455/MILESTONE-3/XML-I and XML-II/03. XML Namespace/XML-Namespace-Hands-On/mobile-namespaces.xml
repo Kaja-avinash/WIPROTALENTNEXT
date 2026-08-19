@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MobileDevices
+    xmlns:moto="http://example.com/moto"
+    xmlns:beetel="http://example.com/beetel">
+
+    <moto:Mobile>
+        <moto:Name>Moto E</moto:Name>
+        <moto:ModelNumber>123</moto:ModelNumber>
+        <moto:Processor>Qualcomm Snapdragon 200</moto:Processor>
+        <moto:Battery>2390 mAh</moto:Battery>
+    </moto:Mobile>
+
+    <beetel:Landline>
+        <beetel:Name>Beetel M71 Landline</beetel:Name>
+        <beetel:ModelNumber>456</beetel:ModelNumber>
+        <beetel:Display>LCD Screen</beetel:Display>
+        <beetel:AnsweringSupport>Yes</beetel:AnsweringSupport>
+    </beetel:Landline>
+
+</MobileDevices>
