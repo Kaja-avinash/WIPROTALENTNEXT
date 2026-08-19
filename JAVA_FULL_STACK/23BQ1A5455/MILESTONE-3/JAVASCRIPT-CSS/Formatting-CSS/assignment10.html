@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Assignment 10 - Image Border</title>
+
+    <style>
+        .repeat-border {
+            border: 20px solid transparent;
+            border-image-source: url("Logo.png");
+            border-image-slice: 30;
+            border-image-repeat: repeat;
+
+            padding: 20px;
+            width: 300px;
+            margin: 30px auto;
+            text-align: center;
+        }
+
+        .stretch-border {
+            border: 20px solid transparent;
+            border-image-source: url("Logo.png");
+            border-image-slice: 30;
+            border-image-repeat: stretch;
+
+            padding: 20px;
+            width: 300px;
+            margin: 30px auto;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="repeat-border">
+        Welcome to CSS World
+    </div>
+
+    <div class="stretch-border">
+        Welcome to CSS World
+    </div>
+
+</body>
+</html>

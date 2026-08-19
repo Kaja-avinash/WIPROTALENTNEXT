@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Front-End Framework - Assignment 1</title>
+
+    <style>
+        body {
+            margin: 0;
+            text-align: center;
+        }
+
+        .responsive-image {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Image 1 - Large screen */
+        @media (min-width: 1001px) {
+            .responsive-image {
+                content: url("ChatGPT Image Aug 12, 2026, 10_21_15 PM.png");
+            }
+        }
+
+        /* Image 2 */
+        @media (min-width: 751px) and (max-width: 1000px) {
+            .responsive-image {
+                content: url("ChatGPT Image Aug 12, 2026, 10_20_03 PM.png");
+            }
+        }
+
+        /* Image 3 */
+        @media (min-width: 501px) and (max-width: 750px) {
+            .responsive-image {
+                content: url("ChatGPT Image Aug 12, 2026, 10_18_16 PM.png");
+            }
+        }
+
+        /* Image 4 - Small screen */
+        @media (max-width: 500px) {
+            .responsive-image {
+                content: url("ChatGPT Image Aug 12, 2026, 10_16_40 PM.png");
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <img
+        class="responsive-image"
+        src="ChatGPT Image Aug 12, 2026, 10_21_15 PM.png"
+        alt="Responsive Image"
+    >
+
+</body>
+</html>
