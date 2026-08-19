@@ -1,0 +1,121 @@
+/* Page background */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: purple;
+    font-family: Arial, sans-serif;
+}
+
+/* Current date and time */
+#dateTime {
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+/* Form container */
+.page-container {
+    width: 450px;
+    margin: 70px auto 40px;
+    padding: 30px;
+    background-color: #4b0082;
+    border-radius: 10px;
+    box-shadow: 0 0 15px black;
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    color: white;
+    text-decoration: underline;
+}
+
+/* Labels */
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: white;
+    font-weight: bold;
+}
+
+/* Text fields */
+input[type="text"],
+input[type="password"],
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #6a0dad;
+    color: white;
+    outline: none;
+}
+
+/* Text box focus */
+input[type="text"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+    background-color: #8a2be2;
+    box-shadow: 0 0 10px white;
+}
+
+/* Placeholder */
+input::placeholder,
+textarea::placeholder {
+    color: #dddddd;
+}
+
+/* Gender section */
+.gender-options {
+    display: flex;
+    gap: 20px;
+}
+
+.gender-options label {
+    margin-top: 5px;
+    font-weight: normal;
+}
+
+/* Radio buttons */
+.gender-options input[type="radio"] {
+    width: auto;
+}
+
+/* Submit button */
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    margin-top: 25px;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff69b4;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Submit button hover */
+button[type="submit"]:hover {
+    background-color: #ff1493;
+    color: white;
+    box-shadow: 0 0 12px white;
+}
+
+/* Mobile screen */
+@media (max-width: 600px) {
+    .page-container {
+        width: 85%;
+        margin-top: 70px;
+    }
+
+    #dateTime {
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,283 @@
+/* ==========================================
+   GENERAL
+========================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    background-color: #ffffff;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* ==========================================
+   PROMOTION SECTION
+========================================== */
+
+.promotion {
+    width: 100%;
+
+    min-height: 150px;
+
+    background-color: #e3a0cf;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 35px;
+
+    text-align: center;
+}
+
+.promotion-text {
+    color: white;
+
+    text-align: center;
+
+    text-transform: uppercase;
+}
+
+.promotion-text span {
+    display: block;
+
+    font-size: 16px;
+
+    font-weight: bold;
+}
+
+.promotion-text strong {
+    display: block;
+
+    font-size: 30px;
+
+    line-height: 1.1;
+
+    font-weight: bold;
+}
+
+.promotion-text small {
+    display: block;
+
+    font-size: 12px;
+
+    margin-top: 4px;
+}
+
+.promotion-logo img {
+    width: 100px;
+    height: 100px;
+
+    object-fit: contain;
+
+    border-radius: 10px;
+}
+
+
+/* ==========================================
+   ACTION BUTTONS
+========================================== */
+
+.actions {
+    width: 100%;
+
+    min-height: 70px;
+
+    padding: 15px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 20px;
+
+    background-color: #ffffff;
+
+    border-bottom: 1px solid #dddddd;
+}
+
+.actions button {
+    background-color: #ffffff;
+
+    border: 1px solid #cccccc;
+
+    border-radius: 5px;
+
+    padding: 6px 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    font-size: 12px;
+
+    cursor: pointer;
+}
+
+.actions button img {
+    width: 20px;
+    height: 20px;
+
+    object-fit: contain;
+}
+
+.actions button:hover {
+    background-color: #f2f2f2;
+
+    box-shadow:
+        0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ==========================================
+   BOOK GRID
+========================================== */
+
+.books-container {
+    padding: 30px 25px;
+}
+
+
+/* ==========================================
+   INDIVIDUAL BOOK
+========================================== */
+
+.book {
+    width: 100%;
+
+    text-align: center;
+
+    padding: 5px;
+
+    margin-bottom: 20px;
+}
+
+
+/* ==========================================
+   BOOK IMAGE
+========================================== */
+
+.book img {
+    width: 100%;
+
+    height: 270px;
+
+    /*
+       IMPORTANT:
+       contain keeps the ENTIRE book cover visible.
+    */
+    object-fit: contain;
+
+    background-color: #ffffff;
+
+    border-radius: 12px;
+
+    display: block;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.15);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.book img:hover {
+    transform: scale(1.03);
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+
+/* ==========================================
+   BOOK TITLE
+========================================== */
+
+.book h5 {
+    margin-top: 10px;
+
+    margin-bottom: 4px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    line-height: 1.3;
+}
+
+
+/* ==========================================
+   AUTHOR
+========================================== */
+
+.book p {
+    margin: 0;
+
+    font-size: 12px;
+
+    color: #555555;
+}
+
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 992px) {
+
+    .book img {
+        height: 250px;
+    }
+
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 576px) {
+
+    .promotion {
+        flex-direction: column;
+
+        padding: 20px;
+
+        gap: 10px;
+    }
+
+    .promotion-text strong {
+        font-size: 24px;
+    }
+
+    .promotion-logo img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .actions {
+        gap: 8px;
+    }
+
+    .actions button {
+        padding: 5px 8px;
+    }
+
+    .book img {
+        height: 230px;
+    }
+
+}
