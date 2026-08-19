@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Login Page</title>
+    <style type="text/css">
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        table {
+            margin: 0 auto;
+            text-align: left;
+        }
+        td {
+            padding: 8px;
+        }
+        .error {
+            color: red;
+            font-size: 13px;
+        }
+    </style>
+    <script type="text/javascript">
+        function validateLogin() {
+            var username = document.forms["loginForm"]["username"].value;
+            var password = document.forms["loginForm"]["password"].value;
+            
+            if (username.trim() === "") {
+                alert("Please enter User Name!");
+                return false;
+            }
+
+            // Password regex: At least 6 characters, 1 uppercase letter, 1 number
+            var passwordRegex = /^(?=.*[A-Z])(?=.*\d).{6,}$/;
+
+            if (password === "") {
+                alert("Password should not be empty!");
+                return false;
+            }
+
+            if (password.length < 6) {
+                alert("Password can't be less than 6 characters!");
+                return false;
+            }
+
+            if (!passwordRegex.test(password)) {
+                alert("Password must contain at least one number and one upper case letter!");
+                return false;
+            }
+
+            // Redirect on success
+            window.location.href = "home.html";
+            return false; // Prevent form submit for static demo
+        }
+    </script>
+</head>
+<body>
+
+    <h2>Login Page</h2>
+
+    <form name="loginForm" action="home.html" onsubmit="return validateLogin()">
+        <table>
+            <tr>
+                <td>Enter User Name:</td>
+                <td><input type="text" name="username"></td>
+            </tr>
+            <tr>
+                <td>Enter Pass Word:</td>
+                <td><input type="password" name="password"></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <br>
+                    <input type="submit" value="Submit">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <br>
+                    <a href="registration.html">New User?</a>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+</html>
